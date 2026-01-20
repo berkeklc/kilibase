@@ -1,0 +1,354 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "programs": "Programs",
+      "impact": "Impact",
+      "media": "Media & Stories",
+      "getInvolved": "Get Involved",
+      "partners": "Partners",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Run for Life. Camp with Purpose. Give Blood.",
+      "subtitle": "A national movement bringing together youth, professionals, institutions and communities at the foot of Mount Kilimanjaro to save lives, inspire responsibility, and build a culture of impact.",
+      "cta1": "Join the Movement",
+      "cta2": "Become a Volunteer",
+      "cta3": "Apply for Fellowship"
+    },
+    "impact": {
+      "title": "Our Impact",
+      "livesImpacted": "Lives Impacted",
+      "bloodUnits": "Blood Units Collected",
+      "volunteers": "Volunteers Engaged",
+      "zones": "Zones Activated"
+    },
+    "about": {
+      "title": "About the Experience",
+      "description": "Kili Basecamp Experience is a flagship wellness, purpose and impact program hosted at the foothills of Mount Kilimanjaro — Africa's most powerful symbol of resilience. The program transforms the Kilimanjaro Marathon season into a national platform for saving lives, strengthening community responsibility, and inspiring a new generation of purpose-driven leaders."
+    },
+    "pillars": {
+      "title": "Three Pillars of Impact",
+      "run": {
+        "title": "Run for Life",
+        "description": "Promoting health, unity and wellness through inclusive community runs."
+      },
+      "camp": {
+        "title": "Camp with Purpose",
+        "description": "Creating space for dialogue, leadership, reflection and national responsibility."
+      },
+      "blood": {
+        "title": "Give Blood",
+        "description": "Mobilizing real action by collecting life-saving blood for hospitals and patients in need."
+      }
+    },
+    "programs": {
+      "title": "Featured Programs",
+      "fellowship": {
+        "title": "Youth Fellowship Program",
+        "description": "A structured leadership journey for young people who want to mobilize their communities, advocate for health and inclusion, and become national ambassadors of purpose.",
+        "learnMore": "Learn More"
+      },
+      "csr": {
+        "title": "Corporate CSR Program",
+        "description": "A meaningful platform for organizations to engage their teams in volunteering, community contribution and credible impact.",
+        "explore": "Explore Partnerships"
+      }
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "Trusted by leading institutions across Tanzania"
+    },
+    "stories": {
+      "title": "Latest Stories",
+      "viewAll": "View All Stories"
+    },
+    "footer": {
+      "tagline": "A Movement for Life",
+      "quickLinks": "Quick Links",
+      "programs": "Programs",
+      "connect": "Connect With Us",
+      "rights": "All rights reserved.",
+      "movement": "Impact Begins at the Mountain of Meaning"
+    },
+    "fellowship": {
+      "pageTitle": "Youth Fellowship Program",
+      "intro": "The Kili Basecamp Youth Fellowship is a selective leadership and impact program designed for young people who want to go beyond participation and become drivers of national change.",
+      "intro2": "Fellows are not spectators. They are mobilizers, advocates and community leaders who carry the spirit of Kili Basecamp into schools, universities, neighborhoods and institutions.",
+      "whatFellowsDo": "What Fellows Do",
+      "doItems": [
+        "Lead blood donation mobilization campaigns",
+        "Organize community awareness sessions",
+        "Represent Kili Basecamp in their institutions",
+        "Participate in leadership and ethics sessions",
+        "Contribute stories and impact reports"
+      ],
+      "whoCanApply": "Who Can Apply",
+      "applyItems": [
+        "Youth aged 18–30",
+        "Students, young professionals, community leaders",
+        "Passion for service and responsibility"
+      ],
+      "whatFellowsGain": "What Fellows Gain",
+      "gainItems": [
+        "National recognition",
+        "Leadership experience",
+        "Official certificate",
+        "Network of purpose-driven peers",
+        "Opportunity to be featured in media"
+      ],
+      "applyButton": "Apply for Fellowship"
+    },
+    "csr": {
+      "pageTitle": "Corporate Social Responsibility Program",
+      "intro": "Kili Basecamp offers organizations a credible, visible and meaningful platform to engage their teams in community contribution and national impact.",
+      "intro2": "This is not symbolic CSR. It is real action with measurable outcomes.",
+      "whyPartner": "Why Partner Through Kili Basecamp",
+      "partnerItems": [
+        "Engage employees in volunteering",
+        "Contribute to national health priorities",
+        "Strengthen organizational reputation",
+        "Demonstrate authentic social responsibility"
+      ],
+      "activities": "Typical Activities",
+      "activityItems": [
+        "Team participation in Run for Life",
+        "Corporate volunteer groups",
+        "Blood donation mobilization",
+        "Environmental responsibility actions"
+      ],
+      "contactButton": "Contact Partnership Team"
+    },
+    "getInvolved": {
+      "title": "Get Involved",
+      "subtitle": "There are many ways to be part of the movement. Choose how you want to contribute.",
+      "participant": "Join as Participant",
+      "volunteer": "Become a Volunteer",
+      "fellowship": "Apply for Youth Fellowship",
+      "partner": "Partner as Organization",
+      "form": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "type": "How would you like to participate?",
+        "message": "Tell us about yourself",
+        "submit": "Submit Application",
+        "success": "Thank you! Your application has been submitted successfully. We will contact you soon."
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Have questions or want to know more? We'd love to hear from you.",
+      "form": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "subject": "Subject",
+        "message": "Your Message",
+        "submit": "Send Message",
+        "success": "Thank you for reaching out! We will get back to you soon."
+      },
+      "info": {
+        "address": "Moshi, Kilimanjaro Region, Tanzania",
+        "email": "info@kilibasecamp.org",
+        "phone": "+255 XXX XXX XXX"
+      }
+    },
+    "impactPage": {
+      "title": "Our Impact",
+      "subtitle": "Transparency builds trust. Impact builds credibility. This page documents the real outcomes of the Kili Basecamp movement.",
+      "metrics": {
+        "bloodCollected": "Blood Units Collected",
+        "zonesActivated": "Zones Activated",
+        "volunteersEngaged": "Volunteers Engaged",
+        "partnersJoined": "Partner Institutions",
+        "communitiesReached": "Communities Reached",
+        "livesImpacted": "Lives Impacted"
+      }
+    },
+    "mediaPage": {
+      "title": "Media & Stories",
+      "subtitle": "Behind every number is a human story. Our documentary series and community stories capture the real voices, real lives and real impact of the Kili Basecamp Experience.",
+      "documentary": "Documentary Series",
+      "stories": "Stories from Participants",
+      "gallery": "Photo Gallery",
+      "press": "Press Coverage"
+    }
+  },
+  "sw": {
+    "nav": {
+      "home": "Nyumbani",
+      "about": "Kuhusu",
+      "programs": "Programu",
+      "impact": "Athari",
+      "media": "Vyombo vya Habari",
+      "getInvolved": "Shiriki",
+      "partners": "Washirika",
+      "contact": "Wasiliana"
+    },
+    "hero": {
+      "title": "Kimbia kwa Uhai. Kambi kwa Kusudi. Toa Damu.",
+      "subtitle": "Harakati ya kitaifa inayowaunganisha vijana, wataalamu, taasisi na jamii chini ya Mlima Kilimanjaro kuokoa maisha, kuhamasisha uwajibikaji na kujenga utamaduni wa mchango wa kweli.",
+      "cta1": "Jiunge na Harakati",
+      "cta2": "Kuwa Mjitolea",
+      "cta3": "Omba Ushirika"
+    },
+    "impact": {
+      "title": "Athari Yetu",
+      "livesImpacted": "Maisha Yaliyoguswa",
+      "bloodUnits": "Vipimo vya Damu Vilivyokusanywa",
+      "volunteers": "Wajitolea Walioshiriki",
+      "zones": "Kanda Zilizoamilishwa"
+    },
+    "about": {
+      "title": "Kuhusu Uzoefu",
+      "description": "Kili Basecamp Experience ni jukwaa la kitaifa la afya, kusudi na mchango wa kijamii linalofanyika chini ya Mlima Kilimanjaro — alama kubwa ya uimara barani Afrika. Mpango huu unageuza msimu wa Kilimanjaro Marathon kuwa fursa ya kuokoa maisha, kuimarisha uwajibikaji wa jamii, na kuhamasisha kizazi kipya cha viongozi wenye kusudi."
+    },
+    "pillars": {
+      "title": "Nguzo Tatu za Athari",
+      "run": {
+        "title": "Kimbia kwa Uhai",
+        "description": "Kukuza afya, umoja na ustawi kupitia mbio za jamii zinazojumuisha wote."
+      },
+      "camp": {
+        "title": "Kambi kwa Kusudi",
+        "description": "Kuunda nafasi ya mazungumzo, uongozi, tafakuri na wajibu wa kitaifa."
+      },
+      "blood": {
+        "title": "Toa Damu",
+        "description": "Kuhamasisha hatua halisi kwa kukusanya damu inayookoa maisha kwa hospitali na wagonjwa wanaohitaji."
+      }
+    },
+    "programs": {
+      "title": "Programu Maalum",
+      "fellowship": {
+        "title": "Programu ya Ushirika wa Vijana",
+        "description": "Safari ya uongozi iliyoundwa kwa vijana wanaotaka kuhamasisha jamii zao, kutetea afya na ujumuisho, na kuwa mabalozi wa kitaifa wa kusudi.",
+        "learnMore": "Jifunze Zaidi"
+      },
+      "csr": {
+        "title": "Programu ya CSR ya Kampuni",
+        "description": "Jukwaa lenye maana kwa mashirika kushirikisha timu zao katika kujitolea, mchango wa jamii na athari ya kuaminika.",
+        "explore": "Gundua Ushirikiano"
+      }
+    },
+    "partners": {
+      "title": "Washirika Wetu",
+      "subtitle": "Tunaaminiwa na taasisi zinazoongoza nchini Tanzania"
+    },
+    "stories": {
+      "title": "Hadithi za Hivi Karibuni",
+      "viewAll": "Tazama Hadithi Zote"
+    },
+    "footer": {
+      "tagline": "Harakati ya Uhai",
+      "quickLinks": "Viungo vya Haraka",
+      "programs": "Programu",
+      "connect": "Wasiliana Nasi",
+      "rights": "Haki zote zimehifadhiwa.",
+      "movement": "Mabadiliko Yanaanza Mlima wa Maana"
+    },
+    "fellowship": {
+      "pageTitle": "Programu ya Ushirika wa Vijana",
+      "intro": "Youth Fellowship Program ya Kili Basecamp ni programu maalum ya uongozi na mchango kwa vijana wanaotaka kwenda zaidi ya kushiriki — na kuwa waendesha mabadiliko ya kweli katika jamii zao.",
+      "intro2": "Washirika si watazamaji. Wao ni wahamasishaji, watetezi na viongozi wa jamii wanaobeba roho ya Kili Basecamp katika shule, vyuo vikuu, mitaa na taasisi.",
+      "whatFellowsDo": "Washirika Wanafanya Nini",
+      "doItems": [
+        "Kuongoza kampeni za uhamasishaji wa utoaji damu",
+        "Kupanga vikao vya uhamasishaji wa jamii",
+        "Kuwakilisha Kili Basecamp katika taasisi zao",
+        "Kushiriki katika vikao vya uongozi na maadili",
+        "Kuchangia hadithi na ripoti za athari"
+      ],
+      "whoCanApply": "Nani Anaweza Kuomba",
+      "applyItems": [
+        "Vijana wenye umri wa miaka 18–30",
+        "Wanafunzi, wataalamu wachanga, viongozi wa jamii",
+        "Shauku ya huduma na uwajibikaji"
+      ],
+      "whatFellowsGain": "Washirika Wanapata Nini",
+      "gainItems": [
+        "Kutambuliwa kitaifa",
+        "Uzoefu wa uongozi",
+        "Cheti rasmi",
+        "Mtandao wa wenzao wenye kusudi",
+        "Fursa ya kuonekana vyomboni vya habari"
+      ],
+      "applyButton": "Omba Ushirika"
+    },
+    "csr": {
+      "pageTitle": "Programu ya Uwajibikaji wa Kijamii wa Kampuni",
+      "intro": "Kili Basecamp inatoa jukwaa la kuaminika na lenye maana kwa taasisi na kampuni kushirikisha wafanyakazi wao katika mchango wa kweli kwa jamii na taifa.",
+      "intro2": "Hii si CSR ya ishara. Ni hatua halisi zenye matokeo yanayopimika.",
+      "whyPartner": "Kwa Nini Kushirikiana Kupitia Kili Basecamp",
+      "partnerItems": [
+        "Kushirikisha wafanyakazi katika kujitolea",
+        "Kuchangia vipaumbele vya afya ya kitaifa",
+        "Kuimarisha sifa ya shirika",
+        "Kuonyesha uwajibikaji wa kijamii wa kweli"
+      ],
+      "activities": "Shughuli za Kawaida",
+      "activityItems": [
+        "Timu kushiriki katika Run for Life",
+        "Vikundi vya wajitolea wa kampuni",
+        "Uhamasishaji wa utoaji damu",
+        "Hatua za uwajibikaji wa mazingira"
+      ],
+      "contactButton": "Wasiliana na Timu ya Ushirikiano"
+    },
+    "getInvolved": {
+      "title": "Shiriki",
+      "subtitle": "Kuna njia nyingi za kuwa sehemu ya harakati hii. Chagua namna unavyotaka kushiriki.",
+      "participant": "Jiunge kama Mshiriki",
+      "volunteer": "Kuwa Mjitolea",
+      "fellowship": "Omba Ushirika wa Vijana",
+      "partner": "Shirikiana kama Shirika",
+      "form": {
+        "name": "Jina Kamili",
+        "email": "Barua Pepe",
+        "phone": "Nambari ya Simu",
+        "type": "Ungependa kushiriki vipi?",
+        "message": "Tuambie kuhusu wewe",
+        "submit": "Wasilisha Maombi",
+        "success": "Asante! Maombi yako yamewasilishwa kwa mafanikio. Tutawasiliana nawe hivi karibuni."
+      }
+    },
+    "contact": {
+      "title": "Wasiliana Nasi",
+      "subtitle": "Una maswali au unataka kujua zaidi? Tungependa kusikia kutoka kwako.",
+      "form": {
+        "name": "Jina Lako",
+        "email": "Barua Pepe",
+        "subject": "Mada",
+        "message": "Ujumbe Wako",
+        "submit": "Tuma Ujumbe",
+        "success": "Asante kwa kuwasiliana! Tutakujibu hivi karibuni."
+      },
+      "info": {
+        "address": "Moshi, Mkoa wa Kilimanjaro, Tanzania",
+        "email": "info@kilibasecamp.org",
+        "phone": "+255 XXX XXX XXX"
+      }
+    },
+    "impactPage": {
+      "title": "Athari Yetu",
+      "subtitle": "Uwazi hujenga imani. Athari hujenga uaminifu. Ukurasa huu unaonyesha matokeo halisi ya harakati ya Kili Basecamp.",
+      "metrics": {
+        "bloodCollected": "Vipimo vya Damu Vilivyokusanywa",
+        "zonesActivated": "Kanda Zilizoamilishwa",
+        "volunteersEngaged": "Wajitolea Walioshiriki",
+        "partnersJoined": "Taasisi Washirika",
+        "communitiesReached": "Jamii Zilizofikwa",
+        "livesImpacted": "Maisha Yaliyoguswa"
+      }
+    },
+    "mediaPage": {
+      "title": "Vyombo vya Habari na Hadithi",
+      "subtitle": "Nyuma ya kila takwimu kuna hadithi ya binadamu. Vipindi vyetu vya video na simulizi za jamii vinaonyesha sauti halisi, maisha halisi na athari halisi za Kili Basecamp.",
+      "documentary": "Mfululizo wa Makala",
+      "stories": "Hadithi za Washiriki",
+      "gallery": "Picha za Matukio",
+      "press": "Habari za Vyombo vya Habari"
+    }
+  }
+}
