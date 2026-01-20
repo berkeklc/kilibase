@@ -114,7 +114,9 @@ export default function HomePage() {
                                 letterSpacing: '-0.03em',
                                 textShadow: '0 2px 10px rgba(0,0,0,0.3)',
                             }}>
-                                {t('hero.title')}
+                                Run for Life.<br />
+                                Camp with Purpose.<br />
+                                <span style={{ color: 'var(--color-blood)' }}>Give Blood.</span>
                             </h1>
 
                             <p style={{
@@ -125,7 +127,7 @@ export default function HomePage() {
                                 maxWidth: '650px',
                                 textShadow: '0 2px 4px rgba(0,0,0,0.5)',
                             }}>
-                                {t('hero.subtitle')}
+                                {t('hero.subtitle')} <span style={{ color: 'var(--color-secondary)', fontWeight: 800, textDecoration: 'underline', textUnderlineOffset: '4px' }}>save lives</span> and build a stronger community.
                             </p>
 
                             <div style={{
