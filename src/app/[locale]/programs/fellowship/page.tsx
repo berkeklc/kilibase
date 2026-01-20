@@ -37,33 +37,45 @@ export default function FellowshipPage() {
         <>
             {/* Hero Section */}
             <section style={{
-                minHeight: '60vh',
+                position: 'relative',
+                minHeight: '80vh',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                background: 'linear-gradient(135deg, rgba(244, 162, 89, 0.95), rgba(201, 85, 62, 0.95)), url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070") center/cover',
-                textAlign: 'center',
-                color: 'white',
+                overflow: 'hidden',
                 paddingTop: '6rem',
             }}>
-                <div className="container">
+                {/* Background Image */}
+                <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundImage: 'url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070")',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    zIndex: 0,
+                }}>
+                    <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/60 to-gray-50" />
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
+                        className="w-full"
                     >
-                        <span style={{
-                            display: 'inline-block',
-                            padding: '0.5rem 1.25rem',
-                            background: 'rgba(255,255,255,0.2)',
-                            borderRadius: '50px',
-                            fontSize: '0.95rem',
-                            marginBottom: '1.5rem',
-                        }}>
-                            🎓 Leadership Program
-                        </span>
-                        <h1 style={{ marginBottom: '1rem' }}>{t('pageTitle')}</h1>
-                        <p style={{ fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto', opacity: 0.95 }}>
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.3 }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium mb-6"
+                        >
+                            <span className="text-xl">🎓</span> Leadership Program
+                        </motion.div>
+
+                        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                            {t('pageTitle')}
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-200 leading-relaxed w-full">
                             {t('intro')}
                         </p>
                     </motion.div>
@@ -71,37 +83,35 @@ export default function FellowshipPage() {
             </section>
 
             {/* Main Content */}
-            <section className="section">
+            <section className="section bg-white">
                 <div className="container">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        style={{
-                            fontSize: '1.125rem',
-                            textAlign: 'center',
-                            maxWidth: '800px',
-                            margin: '0 auto 4rem',
-                            lineHeight: 1.8,
-                        }}
+                        className="text-xl md:text-2xl text-center  mx-auto mb-16 leading-relaxed text-gray-600 font-medium"
                     >
                         {t('intro2')}
                     </motion.p>
 
-                    <div className="grid-3" style={{ marginBottom: '4rem' }}>
+                    <div className="grid md:grid-cols-3 gap-8 mb-16">
                         {/* What Fellows Do */}
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="card"
-                            style={{ borderTop: '4px solid var(--color-accent)' }}
+                            className="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300"
                         >
-                            <h3 style={{ marginBottom: '1.5rem' }}>{t('whatFellowsDo')}</h3>
-                            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="p-3 bg-accent/10 rounded-xl text-accent">
+                                    <Megaphone size={24} />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900">{t('whatFellowsDo')}</h3>
+                            </div>
+                            <ul className="space-y-4">
                                 {doItems.map((item, index) => (
-                                    <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                                        <item.icon size={20} style={{ color: 'var(--color-accent)', marginTop: '2px' }} />
+                                    <li key={index} className="flex items-start gap-3 text-gray-600">
+                                        <div className="mt-1 min-w-[5px] h-[5px] rounded-full bg-accent" />
                                         <span>{item.text}</span>
                                     </li>
                                 ))}
@@ -114,15 +124,20 @@ export default function FellowshipPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="card"
-                            style={{ borderTop: '4px solid var(--color-primary)' }}
+                            className="bg-primary/5 rounded-3xl p-8 border border-primary/10 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
                         >
-                            <h3 style={{ marginBottom: '1.5rem' }}>{t('whoCanApply')}</h3>
-                            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full" />
+                            <div className="flex items-center gap-3 mb-6 relative z-10">
+                                <div className="p-3 bg-primary/10 rounded-xl text-primary">
+                                    <Users size={24} />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900">{t('whoCanApply')}</h3>
+                            </div>
+                            <ul className="space-y-4 relative z-10">
                                 {applyItems.map((item, index) => (
-                                    <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                                        <Check size={20} style={{ color: 'var(--color-primary)', marginTop: '2px' }} />
-                                        <span>{item}</span>
+                                    <li key={index} className="flex items-start gap-3 text-gray-600">
+                                        <Check size={18} className="text-primary mt-1 flex-shrink-0" />
+                                        <span className="font-medium">{item}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -134,14 +149,18 @@ export default function FellowshipPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="card"
-                            style={{ borderTop: '4px solid var(--color-secondary)' }}
+                            className="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300"
                         >
-                            <h3 style={{ marginBottom: '1.5rem' }}>{t('whatFellowsGain')}</h3>
-                            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="p-3 bg-secondary/10 rounded-xl text-secondary">
+                                    <Award size={24} />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900">{t('whatFellowsGain')}</h3>
+                            </div>
+                            <ul className="space-y-4">
                                 {gainItems.map((item, index) => (
-                                    <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                                        <Award size={20} style={{ color: 'var(--color-secondary)', marginTop: '2px' }} />
+                                    <li key={index} className="flex items-start gap-3 text-gray-600">
+                                        <div className="mt-1 min-w-[5px] h-[5px] rounded-full bg-secondary" />
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -149,17 +168,24 @@ export default function FellowshipPage() {
                         </motion.div>
                     </div>
 
-                    {/* CTA */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        style={{ textAlign: 'center' }}
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-24 bg-accent relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-accent-dark via-accent to-accent-light opacity-90" />
+                <div className="container relative z-10 text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Lead?</h2>
+                    <p className="text-xl text-white/90 mb-10 w-full mx-auto leading-relaxed">
+                        Join the next cohort of changemakers.
+                    </p>
+                    <Link
+                        href={`/${currentLocale}/get-involved`}
+                        className="inline-flex items-center gap-2 bg-white text-accent font-bold px-10 py-4 rounded-full hover:scale-105 hover:shadow-2xl transition-all duration-300 text-lg"
                     >
-                        <Link href={`/${currentLocale}/get-involved`} className="btn btn-primary" style={{ fontSize: '1.125rem', padding: '1rem 2.5rem' }}>
-                            {t('applyButton')}
-                        </Link>
-                    </motion.div>
+                        {t('applyButton')}
+                        <Award size={20} />
+                    </Link>
                 </div>
             </section>
         </>

@@ -175,9 +175,7 @@ export default function GiveBloodPage() {
                                     : 'Blood cannot be manufactured. It is the most precious gift one human can give to another.'}"
                             </h2>
                             <div className="flex flex-col items-center gap-4">
-                                <div className="w-16 h-16 rounded-full border-2 border-blood overflow-hidden p-1 shadow-lg">
-                                    <div className="w-full h-full rounded-full bg-blood flex items-center justify-center text-white text-xl font-black">BK</div>
-                                </div>
+
                                 <div>
                                     <div className="text-white font-bold text-lg drop-shadow-md">Dr. Maria Sokoine</div>
                                     <div className="text-white/80 text-sm font-medium uppercase tracking-widest">National Blood Transfusion Service</div>

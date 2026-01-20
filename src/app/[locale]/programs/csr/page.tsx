@@ -29,33 +29,45 @@ export default function CSRPage() {
         <>
             {/* Hero Section */}
             <section style={{
-                minHeight: '60vh',
+                position: 'relative',
+                minHeight: '80vh',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                background: 'linear-gradient(135deg, rgba(37, 37, 37, 0.95), rgba(26, 95, 74, 0.95)), url("https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070") center/cover',
-                textAlign: 'center',
-                color: 'white',
+                overflow: 'hidden',
                 paddingTop: '6rem',
             }}>
-                <div className="container">
+                {/* Background Image */}
+                <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundImage: 'url("https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070")',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    zIndex: 0,
+                }}>
+                    <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/60 to-gray-50" />
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
+                        className="w-full"
                     >
-                        <span style={{
-                            display: 'inline-block',
-                            padding: '0.5rem 1.25rem',
-                            background: 'rgba(255,255,255,0.2)',
-                            borderRadius: '50px',
-                            fontSize: '0.95rem',
-                            marginBottom: '1.5rem',
-                        }}>
-                            🏢 Corporate Partnership
-                        </span>
-                        <h1 style={{ marginBottom: '1rem' }}>{t('pageTitle')}</h1>
-                        <p style={{ fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto', opacity: 0.95 }}>
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.3 }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium mb-6"
+                        >
+                            <span className="text-xl">🏢</span> Corporate Partnership
+                        </motion.div>
+
+                        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                            {t('pageTitle')}
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-200 leading-relaxed w-full">
                             {t('intro')}
                         </p>
                     </motion.div>
@@ -63,74 +75,60 @@ export default function CSRPage() {
             </section>
 
             {/* Intro */}
-            <section className="section section-light">
+            <section className="section bg-white">
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}
+                        className="text-center  mx-auto mb-16"
                     >
-                        <Building2 size={60} style={{ color: 'var(--color-primary)', marginBottom: '1.5rem' }} />
-                        <p style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--color-gray-800)', marginBottom: '1rem' }}>
+                        <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+                            <Building2 size={40} />
+                        </div>
+                        <p className="text-2xl font-bold text-gray-900 mb-4 tracking-tight">
                             {t('intro2')}
                         </p>
-                        <p style={{ fontSize: '1.125rem', color: 'var(--color-gray-600)' }}>
+                        <p className="text-xl text-gray-600 leading-relaxed">
                             Partner with Kili Basecamp to create genuine impact while building a culture of purpose within your organization.
                         </p>
                     </motion.div>
-                </div>
-            </section>
 
-            {/* Why Partner Section */}
-            <section className="section">
-                <div className="container">
-                    <div className="grid-2" style={{ gap: '4rem', alignItems: 'center' }}>
+                    <div className="grid md:grid-cols-2 gap-12 items-start">
+                        {/* Why Partner */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 style={{ marginBottom: '1.5rem' }}>{t('whyPartner')}</h2>
-                            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                            <h2 className="text-3xl font-bold text-gray-900 mb-8">{t('whyPartner')}</h2>
+                            <div className="space-y-6">
                                 {partnerReasons.map((reason, index) => (
-                                    <li key={index} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                        <div style={{
-                                            width: '50px',
-                                            height: '50px',
-                                            borderRadius: '50%',
-                                            background: 'var(--color-gray-100)',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                        }}>
-                                            <reason.icon size={24} style={{ color: 'var(--color-primary)' }} />
+                                    <div key={index} className="flex items-center gap-4 bg-gray-50 p-4 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                                        <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm text-primary flex-shrink-0">
+                                            <reason.icon size={24} />
                                         </div>
-                                        <span style={{ fontSize: '1.1rem' }}>{reason.text}</span>
-                                    </li>
+                                        <span className="text-lg text-gray-700 font-medium">{reason.text}</span>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         </motion.div>
 
+                        {/* Activities */}
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 style={{ marginBottom: '1.5rem' }}>{t('activities')}</h2>
-                            <div className="grid-2" style={{ gap: '1rem' }}>
+                            <h2 className="text-3xl font-bold text-gray-900 mb-8">{t('activities')}</h2>
+                            <div className="grid grid-cols-2 gap-4">
                                 {activities.map((activity, index) => (
                                     <div
                                         key={index}
-                                        style={{
-                                            padding: '1.5rem',
-                                            background: 'var(--color-gray-50)',
-                                            borderRadius: 'var(--radius-lg)',
-                                            textAlign: 'center',
-                                        }}
+                                        className="bg-gray-50 hover:bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 text-center"
                                     >
-                                        <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>{activity.icon}</div>
-                                        <p style={{ fontWeight: 500 }}>{activity.text}</p>
+                                        <div className="text-4xl mb-3">{activity.icon}</div>
+                                        <p className="font-medium text-gray-800">{activity.text}</p>
                                     </div>
                                 ))}
                             </div>
@@ -140,26 +138,21 @@ export default function CSRPage() {
             </section>
 
             {/* CTA */}
-            <section style={{
-                padding: '5rem 0',
-                background: 'linear-gradient(135deg, var(--color-primary), var(--color-primary-dark))',
-                textAlign: 'center',
-                color: 'white',
-            }}>
-                <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+            <section className="py-24 bg-gray-900 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/img/pattern.png')] opacity-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-primary/20" />
+                <div className="container relative z-10 text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Partner?</h2>
+                    <p className="text-xl text-white/80 mb-10 w-full mx-auto leading-relaxed">
+                        Join leading organizations making a real difference through Kili Basecamp.
+                    </p>
+                    <Link
+                        href={`/${currentLocale}/contact`}
+                        className="inline-flex items-center gap-2 bg-primary text-white font-bold px-10 py-4 rounded-full hover:bg-primary-light hover:shadow-2xl transition-all duration-300 text-lg shadow-lg shadow-primary/20"
                     >
-                        <h2 style={{ color: 'white', marginBottom: '1rem' }}>Ready to Partner?</h2>
-                        <p style={{ maxWidth: '600px', margin: '0 auto 2rem', fontSize: '1.125rem', opacity: 0.95 }}>
-                            Join leading organizations making a real difference through Kili Basecamp.
-                        </p>
-                        <Link href={`/${currentLocale}/contact`} className="btn btn-white" style={{ fontSize: '1.125rem', padding: '1rem 2.5rem' }}>
-                            {t('contactButton')}
-                        </Link>
-                    </motion.div>
+                        {t('contactButton')}
+                        <Handshake size={20} />
+                    </Link>
                 </div>
             </section>
         </>

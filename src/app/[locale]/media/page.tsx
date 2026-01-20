@@ -8,12 +8,12 @@ export default function MediaPage() {
     const t = useTranslations('mediaPage');
 
     const videos = [
-        { title: 'Kili Basecamp: A Movement for Life', duration: '12:45', type: 'Documentary' },
-        { title: 'Youth Fellowship Stories', duration: '8:30', type: 'Stories' },
-        { title: 'The Power of Blood Donation', duration: '6:15', type: 'Impact' },
-        { title: 'Running for Unity', duration: '5:20', type: 'Stories' },
-        { title: 'Behind the Scenes', duration: '10:00', type: 'Documentary' },
-        { title: 'Community Voices', duration: '7:45', type: 'Stories' },
+        { title: 'Kili Basecamp: A Movement for Life', releaseDate: 'Feb 14, 2026', type: 'Documentary', upcoming: true },
+        { title: 'Youth Fellowship Stories', releaseDate: 'Feb 21, 2026', type: 'Stories', upcoming: true },
+        { title: 'The Power of Blood Donation', releaseDate: 'Feb 28, 2026', type: 'Impact', upcoming: true },
+        { title: 'Running for Unity', releaseDate: 'Mar 7, 2026', type: 'Stories', upcoming: true },
+        { title: 'Behind the Scenes', releaseDate: 'Mar 14, 2026', type: 'Documentary', upcoming: true },
+        { title: 'Community Voices', releaseDate: 'Mar 23, 2026', type: 'Stories', upcoming: true },
     ];
 
     const pressItems = [
@@ -26,23 +26,46 @@ export default function MediaPage() {
         <>
             {/* Hero Section */}
             <section style={{
-                minHeight: '50vh',
+                position: 'relative',
+                minHeight: '60vh',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                background: 'linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(74, 111, 165, 0.9)), url("https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2070") center/cover',
-                textAlign: 'center',
-                color: 'white',
+                overflow: 'hidden',
                 paddingTop: '6rem',
             }}>
-                <div className="container">
+                <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundImage: "url('/img/mountain-3081356_1920.jpg')",
+
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    zIndex: 0,
+                }}>
+                    <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/60 to-gray-50" />
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.8 }}
+                        className="w-full"
                     >
-                        <h1 style={{ marginBottom: '1rem' }}>{t('title')}</h1>
-                        <p style={{ fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto', opacity: 0.95 }}>
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.3 }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium mb-6"
+                        >
+                            <Play size={16} />
+                            Media Center
+                        </motion.div>
+
+                        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                            {t('title')}
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-200 leading-relaxed w-full">
                             {t('subtitle')}
                         </p>
                     </motion.div>
@@ -70,7 +93,7 @@ export default function MediaPage() {
                                     overflow: 'hidden',
                                     background: 'white',
                                     boxShadow: 'var(--shadow-md)',
-                                    cursor: 'pointer',
+                                    cursor: video.upcoming ? 'default' : 'pointer',
                                     transition: 'all 0.3s',
                                 }}
                                 className="video-card"
@@ -83,43 +106,65 @@ export default function MediaPage() {
                                     justifyContent: 'center',
                                     position: 'relative',
                                 }}>
-                                    <div style={{
-                                        width: '60px',
-                                        height: '60px',
-                                        borderRadius: '50%',
-                                        background: 'rgba(255,255,255,0.9)',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                    }}>
-                                        <Play size={24} fill="var(--color-secondary)" color="var(--color-secondary)" />
-                                    </div>
-                                    <span style={{
-                                        position: 'absolute',
-                                        bottom: '0.5rem',
-                                        right: '0.5rem',
-                                        background: 'rgba(0,0,0,0.7)',
-                                        color: 'white',
-                                        padding: '0.25rem 0.5rem',
-                                        borderRadius: 'var(--radius-sm)',
-                                        fontSize: '0.75rem',
-                                    }}>
-                                        {video.duration}
-                                    </span>
+                                    {video.upcoming ? (
+                                        <div style={{
+                                            position: 'absolute',
+                                            inset: 0,
+                                            background: 'rgba(0,0,0,0.6)',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            backdropFilter: 'blur(2px)',
+                                        }}>
+                                            <div style={{
+                                                padding: '0.5rem 1rem',
+                                                background: 'rgba(255,255,255,0.1)',
+                                                border: '1px solid rgba(255,255,255,0.2)',
+                                                borderRadius: '50px',
+                                                color: 'white',
+                                                fontSize: '0.875rem',
+                                                fontWeight: 600,
+                                                marginBottom: '0.5rem',
+                                            }}>
+                                                Coming Soon
+                                            </div>
+                                            <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.875rem' }}>
+                                                {video.releaseDate}
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div style={{
+                                            width: '60px',
+                                            height: '60px',
+                                            borderRadius: '50%',
+                                            background: 'rgba(255,255,255,0.9)',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                        }}>
+                                            <Play size={24} fill="var(--color-secondary)" color="var(--color-secondary)" />
+                                        </div>
+                                    )}
                                 </div>
-                                <div style={{ padding: '1rem' }}>
-                                    <span style={{
-                                        display: 'inline-block',
-                                        background: 'var(--color-gray-100)',
-                                        color: 'var(--color-gray-600)',
-                                        padding: '0.25rem 0.5rem',
-                                        borderRadius: 'var(--radius-sm)',
-                                        fontSize: '0.75rem',
-                                        marginBottom: '0.5rem',
-                                    }}>
-                                        {video.type}
-                                    </span>
-                                    <h4 style={{ fontSize: '1rem' }}>{video.title}</h4>
+                                <div style={{ padding: '1.5rem', borderBottom: '4px solid var(--color-primary)' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+                                        <span style={{
+                                            display: 'inline-block',
+                                            background: 'var(--color-gray-100)',
+                                            color: 'var(--color-gray-600)',
+                                            padding: '0.25rem 0.75rem',
+                                            borderRadius: '50px',
+                                            fontSize: '0.75rem',
+                                            fontWeight: 600,
+                                        }}>
+                                            {video.type}
+                                        </span>
+                                        <span style={{ fontSize: '0.8rem', color: 'var(--color-gray-500)' }}>
+                                            {video.releaseDate}
+                                        </span>
+                                    </div>
+                                    <h4 style={{ fontSize: '1.125rem', fontWeight: 700, lineHeight: 1.4 }}>{video.title}</h4>
                                 </div>
                             </motion.div>
                         ))}
@@ -209,7 +254,7 @@ export default function MediaPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 style={{ color: 'white', marginBottom: '1rem' }}>Media Kit</h2>
+                        <h2 style={{ color: 'black', marginBottom: '1rem' }}>Media Kit</h2>
                         <p style={{ maxWidth: '600px', margin: '0 auto 2rem', opacity: 0.95 }}>
                             Download our media kit for logos, photos, and brand guidelines.
                         </p>

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Users, Heart, Award, Building2, CheckCircle } from 'lucide-react';
+import { ArrowRight, Heart, Users, Calendar, HandHeart, Award, Building2, CheckCircle } from 'lucide-react';
 
 export default function GetInvolvedPage() {
     const t = useTranslations('getInvolved');
@@ -42,23 +42,45 @@ export default function GetInvolvedPage() {
         <>
             {/* Hero Section */}
             <section style={{
-                minHeight: '50vh',
+                position: 'relative',
+                minHeight: '60vh',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                background: 'linear-gradient(135deg, rgba(26, 95, 74, 0.95), rgba(201, 85, 62, 0.9)), url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2070") center/cover',
-                textAlign: 'center',
-                color: 'white',
+                overflow: 'hidden',
                 paddingTop: '6rem',
             }}>
-                <div className="container">
+                <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundImage: 'url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2070")',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    zIndex: 0,
+                }}>
+                    <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/60 to-gray-50" />
+                </div>
+
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.8 }}
+                        className="w-full"
                     >
-                        <h1 style={{ marginBottom: '1rem' }}>{t('title')}</h1>
-                        <p style={{ fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto', opacity: 0.95 }}>
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.3 }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium mb-6"
+                        >
+                            <HandHeart size={16} />
+                            Get Involved
+                        </motion.div>
+
+                        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                            {t('title')}
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-200 leading-relaxed w-full">
                             {t('subtitle')}
                         </p>
                     </motion.div>
