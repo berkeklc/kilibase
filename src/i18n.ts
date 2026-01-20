@@ -11,6 +11,7 @@ export default getRequestConfig(async ({ locale }) => {
 
   const messages = (await import('../messages/messages.json')).default;
 
+  // Fix: Explicitly return locale to satisfy RequestConfig type
   return {
     locale: locale as string,
     messages: messages[locale as Locale]

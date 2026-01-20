@@ -314,6 +314,25 @@ export default function HomePage() {
                 color: 'white',
             }}>
                 <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <h2 style={{
+                            fontSize: 'clamp(2rem, 5vw, 3rem)',
+                            fontWeight: 800,
+                            marginBottom: '1rem',
+                            color: 'white'
+                        }}>
+                            {currentLocale === 'sw' ? 'Matokeo Tarajiwa' : 'Our Expected Impact'}
+                        </h2>
+                        <p style={{
+                            color: 'var(--color-gray-400)',
+                            fontSize: '1.125rem',
+                            maxWidth: '600px',
+                            margin: '0 auto'
+                        }}>
+                            {currentLocale === 'sw' ? 'Malengo yetu ya mwaka 2026' : 'Our targets for the 2026 campaign'}
+                        </p>
+                    </div>
+
                     <div className="grid-4" style={{ textAlign: 'center' }}>
                         {[
                             { value: 6000, label: t('impact.livesImpacted') + '+', icon: <Heart size={24} /> },
